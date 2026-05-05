@@ -14,7 +14,7 @@ body {
     font-family: 'Exo 2', sans-serif;
     color: #2f2418;
     background:
-        linear-gradient(135deg, rgba(255, 249, 239, 0.95), rgba(255, 232, 190, 0.88)),
+        linear-gradient(135deg, rgba(255, 250, 242, 0.96), rgba(244, 232, 211, 0.9)),
         #fff4e1;
 }
 
@@ -47,7 +47,7 @@ main {
 .hat_name h2 {
     margin: 0;
     font-size: clamp(1.55rem, 1vw + 1.2rem, 2.25rem);
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0;
 }
 
@@ -88,6 +88,12 @@ main {
     padding: clamp(50px, 8vw, 120px) clamp(4px, 5vw, 120px);
 }
 
+.cta_section {
+    min-height: clamp(420px, 52vh, 680px);
+    padding-top: clamp(56px, 7vw, 100px);
+    padding-bottom: clamp(76px, 9vw, 130px);
+}
+
 .hat_text_h2, .philosophy_text_h2 {
     max-width: 1180px;
     margin: 0;
@@ -96,6 +102,7 @@ main {
     font-weight: 800;
     letter-spacing: 0;
     text-transform: uppercase;
+    text-wrap: balance;
 }
 .philosophy_text_h2{
     font-size: clamp(3rem, 4.5vw, 6.4rem);
@@ -106,6 +113,7 @@ main {
     font-size: clamp(1.25rem, 1vw + 1rem, 2.3rem);
     line-height: 1.42;
     color: #5d4328;
+    text-wrap: pretty;
 }
 
 .button_ {
@@ -159,21 +167,14 @@ main {
 }
 .sort_sheet_box_2 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, minmax(260px, 520px));
+    justify-content: center;
     gap: clamp(14px, 2vw, 28px);
-    padding: 0 0 clamp(72px, 9vw, 140px);
+    padding: 0 0 clamp(64px, 8vw, 120px);
 }
 
 .sort_sheet_box_2 .sheet {
     width: 100%;
-}
-
-.sort_sheet_box_2 .sheet:nth-child(1) {
-    grid-column: 2 / 3;
-}
-
-.sort_sheet_box_2 .sheet:nth-child(2) {
-    grid-column: 3 / 4;
 }
 .sheet {
     min-height: 240px;
@@ -184,16 +185,23 @@ main {
     box-shadow: 0 18px 45px rgba(185, 109, 16, 0.1);
 }
 
+.final_info_section {
+    text-align: center;
+}
+
 .sheet_h3 {
     margin: 0 0 16px;
     font-size: clamp(2.2rem, 2vw + 1.5rem, 4rem);
     font-weight: 800;
+    line-height: 1.05;
+    text-wrap: balance;
 }
 
 .sheet_text {
     font-size: clamp(1.1rem, 0.5vw + 1rem, 1.55rem);
     line-height: 1.55;
     color: #6b4b2a;
+    text-wrap: pretty;
 }
 
 .sort_sheet_2 {
@@ -233,7 +241,7 @@ main {
     justify-content: center;
     text-align: left;
     padding: clamp(36px, 5vw, 90px);
-    background: #fff8e1;
+    background: transparent;
 }
 .website_label,
 .website_label_3 {
@@ -245,6 +253,14 @@ main {
     font-weight: 800;
 }
 
+.centered_label {
+    display: block;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
 .website_title {
     max-width: 760px;
     margin: 0 0 24px;
@@ -253,6 +269,7 @@ main {
     color: #2f2418;
     font-weight: 800;
     letter-spacing: 0;
+    text-wrap: balance;
 }
 
 .website_description {
@@ -261,6 +278,7 @@ main {
     font-size: clamp(1.08rem, 0.7vw + 0.95rem, 1.8rem);
     line-height: 1.65;
     color: #654727;
+    text-wrap: pretty;
 }
 
 .accent_text {
@@ -300,6 +318,10 @@ main {
     padding: clamp(10px, 4vw, 40px) 0 clamp(80px, 10vw, 150px);
 }
 
+.values_section {
+    padding-bottom: clamp(14px, 3vw, 40px);
+}
+
 .sort_sheet_3 {
     display: grid;
     grid-template-columns: minmax(220px, 360px) minmax(0, 1fr);
@@ -311,6 +333,11 @@ main {
     box-shadow: 0 18px 45px rgba(185, 109, 16, 0.12);
 }
 
+.about_profile {
+    grid-template-columns: minmax(220px, 330px) minmax(0, 820px);
+    justify-content: center;
+}
+
 .sheet_img_Website_development_3 {
     width: min(100%, 360px);
     aspect-ratio: 1;
@@ -320,6 +347,7 @@ main {
     align-items: center;
     justify-content: center;
     padding: 14px;
+    overflow: hidden;
 }
 
 .img_Website_development_3 {
@@ -382,6 +410,10 @@ a {
     .website_text_box {
         padding: 110px;
     }
+
+    .sheet {
+        min-height: 270px;
+    }
 }
 
 @media (max-width: 980px) {
@@ -404,8 +436,15 @@ a {
 
     .sort_sheet_1,
     .sort_sheet_2,
-    .sort_sheet_3 {
+    .sort_sheet_3,
+    .sort_sheet_box_2 {
         grid-template-columns: 1fr;
+    }
+
+    .sort_sheet_box_2 {
+        max-width: 640px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .reverse_mobile .sheet_img_Website_development_2 {
@@ -421,7 +460,16 @@ a {
     }
 
     .sort_sheet_3 {
-        justify-items: start;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .sort_sheet_3 .website_text_box,
+    .sort_sheet_3 .website_text_box_ebout_my,
+    .sort_sheet_3 .website_description,
+    .sort_sheet_3 .website_title {
+        max-width: 760px;
+        text-align: center;
     }
 
     .footer-content {
@@ -454,6 +502,7 @@ a {
 
     .hat_text_h2 {
         font-size: clamp(2.55rem, 14vw, 4.2rem);
+        line-height: 1.02;
     }
 
     .hat_text_p {
@@ -470,7 +519,11 @@ a {
 
     .sheet {
         min-height: 0;
-        padding: 26px;
+        padding: 24px;
+    }
+
+    .sheet_h3 {
+        font-size: clamp(2rem, 12vw, 3.1rem);
     }
 
     .sheet_img_Website_development_2 {
@@ -479,6 +532,10 @@ a {
 
     .website_text_box {
         padding: 28px 22px;
+    }
+
+    .website_text_box_ebout_my {
+        padding: 0;
     }
 
     .website_title {
@@ -505,5 +562,23 @@ a {
     .footer-left {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+@media (max-width: 380px) {
+    .hat_icon {
+        grid-template-columns: 1fr;
+    }
+
+    .hat_text_h2 {
+        font-size: 2.35rem;
+    }
+
+    .website_title {
+        font-size: 1.9rem;
+    }
+
+    .sheet {
+        padding: 20px;
     }
 }
