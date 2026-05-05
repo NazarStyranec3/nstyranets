@@ -2,9 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{% block title %}nstyranets - Website developer and SEO automation{% endblock %}</title>
-  <meta name="description" content="{% block meta_description %}I build fast, responsive websites, SEO-ready landing pages, business automation and Telegram bots that help companies get more leads and save time.{% endblock %}">
-  <!-- <meta name="robots" content="index, follow"> -->
+  <title>{% block title %}nstyranets - Website developer for business websites, SEO and automation{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}I build fast business websites, SEO-focused landing pages and practical automation that help companies get more client requests and save time.{% endblock %}">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="nstyranets">
+  <link rel="canonical" href="{% block canonical_url %}https://nstyranets.com/{% endblock %}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="nstyranets">
+  <meta property="og:title" content="{% block og_title %}nstyranets - business websites, SEO and automation{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}Fast, responsive and lead-focused websites with SEO structure, clean design and automation for small businesses and personal brands.{% endblock %}">
+  <meta property="og:url" content="{% block og_url %}https://nstyranets.com/{% endblock %}">
+  <meta property="og:image" content="https://nstyranets.com/media/img/1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% block twitter_title %}nstyranets - websites that bring clients{% endblock %}">
+  <meta name="twitter:description" content="{% block twitter_description %}Business websites, SEO-ready landing pages and automation built to turn visitors into real requests.{% endblock %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
@@ -14,7 +25,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Nunito:wght@400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "nstyranets",
+    "url": "https://nstyranets.com/",
+    "image": "https://nstyranets.com/media/img/my_photo.jpg",
+    "description": "Business website development, SEO-ready landing pages, Telegram bots and automation for companies that need more client requests online.",
+    "areaServed": "Worldwide",
+    "serviceType": [
+      "Website development",
+      "Landing page development",
+      "SEO optimization",
+      "Telegram bot development",
+      "Business automation"
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="full">
