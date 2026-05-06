@@ -5,107 +5,147 @@
 {% block og_description %}Website development, SEO structure and automation for businesses that want a stronger online presence and more client requests.{% endblock %}
 {% block twitter_title %}Business websites that bring clients - nstyranets{% endblock %}
 {% block twitter_description %}Fast, mobile-friendly websites with SEO, clear calls to action and automation behind the scenes.{% endblock %}
-{%block hat_text %}
-  <h1 class="hat_text_h2">Websites that bring clients</h1>
-  <p class="hat_text_p">I build fast business websites, landing pages and automation systems that make your offer clear, earn trust and turn visitors into real requests.</p>
-  <a class="button_" href="#contact"><span>Discuss the project</span></a>
+{% block hat_text %}
+  <div class="hero-copy">
+    <p class="eyebrow">Independent web developer / SEO / automation</p>
+    <h1 class="hat_text_h2">Websites that make your business easier to choose</h1>
+    <p class="hat_text_p">I design and build fast business websites, SEO-ready landing pages and automation flows that turn a clear offer into real client requests.</p>
+
+    <div class="hero-actions">
+      <a class="button_" href="#contact"><span>Discuss the project</span></a>
+      <a class="button_ secondary_button" href="#cases"><span>View approach</span></a>
+    </div>
+
+    <div class="hero-stack" aria-label="Technology stack">
+      <span>Django</span>
+      <span>Python</span>
+      <span>HTML/CSS</span>
+      <span>SEO</span>
+      <span>Telegram bots</span>
+    </div>
+  </div>
+
+  <div class="hero-visual" aria-label="Hybrid creative developer visual">
+    <div class="hero-card">
+      <img src="/media/img/02.png" alt="Hybrid creative woman with digital website, code, SEO and automation overlays" width="1024" height="1536" decoding="async">
+      <div class="hero-card-info">
+        <span>Digital partner</span>
+        <strong>Human style + smart web systems</strong>
+      </div>
+    </div>
+    <div class="floating-note note-top">
+      <span>Digital guide</span>
+      <strong>Visual direction for your brand</strong>
+    </div>
+    <div class="floating-note note-bottom">
+      <span>Web system</span>
+      <strong>Design, SEO and smart automation</strong>
+    </div>
+  </div>
 {% endblock %}
 {% block body %}
 <div class="mina_home_div">
-    <div class="page_inner">
-        <div class="sort_sheet_1" id="services">
-            <div class="sheet">
-                <h3 class="sheet_h3">WEB</h3>
-                <div class="sheet_text">Custom business websites and landing pages with a strong first screen, clear offer, fast loading and a direct path to contact.</div>
-            </div>
+  <div class="page_inner">
+    <section class="intro-grid" id="services">
+      <article class="sheet feature-card feature-card-large">
+        <span class="card-number">01</span>
+        <h3 class="sheet_h3">WEB</h3>
+        <div class="sheet_text">Custom websites and landing pages with a sharp first screen, readable sections, fast loading and a direct path to contact.</div>
+      </article>
 
-            <div class="sheet">
-                <h3 class="sheet_h3">SEO</h3>
-                <div class="sheet_text">SEO structure, headings, meta tags and service-focused content so search engines and buyers understand what you offer.</div>
-            </div>
+      <article class="sheet feature-card">
+        <span class="card-number">02</span>
+        <h3 class="sheet_h3">SEO</h3>
+        <div class="sheet_text">Headings, metadata, service pages and content structure that help people and search engines understand what you offer.</div>
+      </article>
 
-            <div class="sheet">
-                <h3 class="sheet_h3">AUTO</h3>
-                <div class="sheet_text">Telegram bots, parsing, reports and lead notifications that help you answer faster and spend less time on routine.</div>
-            </div>
+      <article class="sheet feature-card feature-card-tall">
+        <span class="card-number">03</span>
+        <h3 class="sheet_h3">AUTO</h3>
+        <div class="sheet_text">Telegram bots, parsing, notifications and reports that remove routine from the work behind your website.</div>
+      </article>
+    </section>
+
+    <section class="sort_sheet_2 case-panel" id="cases">
+      <div class="website_text_box">
+        <h3 class="website_label">Website development</h3>
+        <h2 class="website_title">A site shaped around the decision your client needs to make</h2>
+        <p class="website_description">
+          I plan every section like a simple sales path: promise, proof, service detail, trust signals and a contact button that is easy to find.
+        </p>
+
+        <ul class="website_list">
+          <li>Responsive layout for phones, tablets, laptops and wide screens</li>
+          <li>Strong hero section with real offer, not empty decoration</li>
+          <li>Clean Django foundation that is easy to extend</li>
+        </ul>
+      </div>
+
+      <div class="sheet_img_Website_development_2 image-panel">
+        <img src="/media/img/1.png" alt="Custom website development workspace with responsive design planning and page structure" class="img_Website_development_1" width="1694" height="928" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section class="split-showcase">
+      <div class="showcase-image">
+        <img src="/media/img/4.png" alt="SEO search traffic dashboard with analytics and search result cards" width="1693" height="929" loading="lazy" decoding="async">
+      </div>
+
+      <div class="showcase-content">
+        <h3 class="website_label">SEO optimization</h3>
+        <h2 class="website_title">Readable pages that can also be found</h2>
+        <p class="website_description">
+          SEO starts before launch: semantic HTML, clear service copy, performance, mobile comfort and content that answers the question your buyer already has.
+        </p>
+        <a class="text-link" href="#contact">Plan SEO structure</a>
+      </div>
+    </section>
+
+    <section class="process-section">
+      <div class="section-heading">
+        <p class="eyebrow">How I work</p>
+        <h2 class="website_title">From first idea to working system</h2>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-step">
+          <span>01</span>
+          <h3>Offer clarity</h3>
+          <p>I help turn your service into a simple structure people can understand quickly.</p>
+        </article>
+        <article class="process-step">
+          <span>02</span>
+          <h3>Visual direction</h3>
+          <p>We choose a style that feels professional, personal and useful for your market.</p>
+        </article>
+        <article class="process-step">
+          <span>03</span>
+          <h3>Development</h3>
+          <p>I build the responsive pages, SEO foundation and the technical parts behind them.</p>
+        </article>
+        <article class="process-step">
+          <span>04</span>
+          <h3>Automation</h3>
+          <p>When needed, I connect bots, parsing, reports and lead notifications.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="all_sort_sheet_3" id="about">
+      <div class="about-band">
+        <div class="about-photo">
+          <img src="/media/img/04.png" alt="nstyranets website developer portrait" width="400" height="400" loading="lazy" decoding="async">
         </div>
 
-        <div class="sort_sheet_2">
-            <div class="website_text_box">
-                <h3 class="website_label">Website development</h3>
-                <h2 class="website_title">A website built around your offer</h2>
-                <p class="website_description">
-                    I do not just assemble pages. I shape your website like a sales path: a clear promise, useful sections, proof of value and a contact button that is easy to find.
-                </p>
-
-                <ul class="website_list">
-                    <li>Fast loading and clean technical foundation for better user experience</li>
-                    <li>Responsive layout for phones, tablets, laptops and large screens</li>
-                    <li>SEO-friendly headings, service sections and call-to-action blocks</li>
-                </ul>
-            </div>
-
-            <div class="sheet_img_Website_development_2">
-                <img src="/media/img/1.png" alt="Custom website development workspace with responsive design planning and page structure" class="img_Website_development_1" width="1694" height="928" loading="lazy" decoding="async">
-            </div>
+        <div class="website_text_box">
+          <h3 class="website_label">Let's get acquainted</h3>
+          <h2 class="website_title">A developer who thinks about business, not only pixels</h2>
+          <p class="website_description">
+            I work with small businesses, services and personal brands that need a website to look confident and bring real requests. The result is a polished interface, clean code, SEO structure and automation where it saves time.
+          </p>
         </div>
-
-        <div class="sort_sheet_2 reverse_mobile" id="cases">
-            <div class="sheet_img_Website_development_2">
-                <img src="/media/img/4.png" alt="SEO search traffic dashboard with analytics, keyword structure and search result cards" class="img_Website_development_1" width="1693" height="929" loading="lazy" decoding="async">
-            </div>
-
-            <div class="website_text_box">
-                <h3 class="website_label">SEO optimization</h3>
-                <h2 class="website_title">Search traffic with a clear structure</h2>
-                <p class="website_description">
-                    SEO starts before launch: semantic HTML, readable copy, page speed, mobile comfort and content that answers what your customers search for before they decide to buy.
-                </p>
-                <p class="website_description accent_text">The goal is simple: more qualified visitors, more trust and more client requests.</p>
-            </div>
-        </div>
-
-        <div class="sort_sheet_2">
-            <div class="website_text_box">
-                <h3 class="website_label">Automation & AUTO</h3>
-                <h2 class="website_title">Automate the work behind the site</h2>
-                <p class="website_description">
-                    When your website needs more than a beautiful interface, I connect automation: parsers, structured reports, integrations and Telegram bots for quick communication with leads.
-                </p>
-
-                <ul class="website_list">
-                    <li>Parsing competitor content, prices or public data</li>
-                    <li>Automated reports, lead notifications and CRM-ready flows</li>
-                </ul>
-            </div>
-
-            <div class="sheet_img_Website_development_2">
-                <img src="/media/img/3.png" alt="Business automation workflow dashboard with lead notifications and chat bot interface" class="img_Website_development_1" width="1695" height="928" loading="lazy" decoding="async">
-            </div>
-        </div>
-
-        <div class="all_sort_sheet_3" id="about">
-            <h3 class="website_label_3">Let's get acquainted</h3>
-
-            <div class="sort_sheet_3">
-                <div class="sheet_img_Website_development_3">
-                    <img src="/media/img/6.png" alt="Friendly developer workspace with warm desk, laptop and positive welcome mood" class="img_Website_development_3" width="1649" height="954" loading="lazy" decoding="async">
-                </div>
-
-                <div class="website_text_box">
-                    <h3 class="website_title">A developer who thinks about business</h3>
-
-                    <p class="website_description">
-                        I help small businesses, services and personal brands look stronger online: from the first screen and SEO structure to the final contact button. My focus is a website that feels polished and helps people choose you faster.
-                    </p>
-
-                    <p class="website_description">
-                        You get careful design, clean code, mobile adaptation, understandable content and automation where it really saves time.
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-    </div>
+      </div>
+    </section>
+  </div>
 </div>
 {% endblock %}
