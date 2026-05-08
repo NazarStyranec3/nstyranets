@@ -1,0 +1,28 @@
+[Unit]
+Description=nstyranets Django app
+After=network.target postgresql.service
+
+[Service]
+User=nstyranets
+Group=www-data
+WorkingDirectory=/var/www/nstyranets
+EnvironmentFile=/etc/nstyranets.env
+Environment=DJANGO_SETTINGS_MODULE=nstyranets.settings_prod
+ExecStart=/var/www/nstyranets/.venv/bin/gunicorn nstyranets.wsgi:application \
+  --workers 3 \
+  --bind unix:/run/nstyranets.sock \
+  --access-logfile /var/log/nstyranets/access.log \
+  --error-logfile /var/log/nstyranets/error.log
+Restart=always
+RestartSec=5
+RuntimeDirectory=nstyranets
+RuntimeDirectoryMode=0755
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/var/www/nstyranets/media /var/www/nstyranets/staticfiles /var/log/nstyranets /run
+
+[Install]
+WantedBy=multi-user.target
