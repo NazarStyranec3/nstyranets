@@ -14,6 +14,15 @@ fi
 sudo mkdir -p "$APP_DIR" /var/log/nstyranets
 sudo chown -R "$APP_USER":www-data "$APP_DIR" /var/log/nstyranets
 
+if [ ! -f /etc/nstyranets.env ]; then
+  echo "Missing /etc/nstyranets.env. Create it from deploy/env.production.example before running this script."
+  exit 1
+fi
+
+set -a
+. /etc/nstyranets.env
+set +a
+
 cd "$APP_DIR"
 python3 -m venv .venv
 . .venv/bin/activate
@@ -27,12 +36,13 @@ sudo cp deploy/nstyranets.service /etc/systemd/system/nstyranets.service
 sudo systemctl daemon-reload
 sudo systemctl enable --now nstyranets
 
-sudo cp deploy/nginx-nstyranets.conf /etc/nginx/sites-available/nstyranets
+sudo cp deploy/nginx-nstyranets-http.conf /etc/nginx/sites-available/nstyranets
 if [ ! -e /etc/nginx/sites-enabled/nstyranets ]; then
   sudo ln -s /etc/nginx/sites-available/nstyranets /etc/nginx/sites-enabled/nstyranets
 fi
 sudo nginx -t
 sudo systemctl reload nginx
 
-echo "Bootstrap complete. Add TLS with:"
+echo "Bootstrap complete. After DNS points to this server, add TLS with:"
 echo "sudo certbot --nginx -d nstyranets.com -d www.nstyranets.com"
+echo "After certbot succeeds, you can replace the nginx site with deploy/nginx-nstyranets.conf if you want the stricter handcrafted TLS config."
